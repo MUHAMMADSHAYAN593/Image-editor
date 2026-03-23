@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://image-editor-lovat-eight.vercel.app/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
+```
+
+**Step 4: Add `robots.txt`** — create this in your project root:
+```
+User-agent: *
+Allow: /
+Sitemap: https://image-editor-lovat-eight.vercel.app/sitemap.xml
