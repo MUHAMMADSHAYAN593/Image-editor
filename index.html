@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Online - Pro Image Editor</title>
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <i class="ri-camera-lens-line"></i>
+            <span>Lumina Edit</span>
+        </div>
+        <div class="actions">
+            <label for="image-input" class="btn btn-secondary">
+                <i class="ri-upload-2-line"></i> Open
+                <input type="file" id="image-input" accept="image/*" hidden>
+            </label>
+            <button id="download-btn" class="btn btn-primary">
+                <i class="ri-download-line"></i> Export
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <nav class="left-toolbar">
+            <div class="tool-group">
+                <button class="tool-btn active" data-tool="move" title="Move (V)"><i class="ri-drag-move-line"></i></button>
+                <button class="tool-btn" data-tool="select" title="Marquee Select (M)"><i class="ri-layout-masonry-line"></i></button>
+                <button class="tool-btn" data-tool="brush" title="Brush (B)"><i class="ri-brush-line"></i></button>
+                <button class="tool-btn" data-tool="eraser" title="Eraser (E)"><i class="ri-eraser-line"></i></button>
+                <button class="tool-btn" data-tool="fill" title="Fill (G)"><i class="ri-paint-fill"></i></button>
+            </div>
+            <div class="tool-group">
+                <button class="tool-btn" data-tool="text" title="Text (T)"><i class="ri-text"></i></button>
+                <button class="tool-btn" data-tool="shape" title="Shapes (U)"><i class="ri-shape-line"></i></button>
+                <button class="tool-btn" data-tool="crop" title="Crop (C)"><i class="ri-crop-line"></i></button>
+            </div>
+            <div class="tool-group colors-group">
+                <input type="color" id="primary-color" value="#000000" title="Primary Color">
+                <input type="color" id="secondary-color" value="#ffffff" title="Secondary Color">
+                <button id="swap-colors" title="Swap Colors (X)" class="btn-icon"><i class="ri-arrow-left-right-line"></i></button>
+            </div>
+        </nav>
+
+        <div class="workspace">
+            <div class="top-options-bar">
+                <div id="tool-options" class="options-container">
+                    <div class="option-group" id="brush-options">
+                        <label>Size:</label>
+                        <input type="range" id="brush-size" min="1" max="100" value="10">
+                        <span id="brush-size-val">10px</span>
+                    </div>
+                </div>
+                <div class="canvas-actions">
+                    <button class="btn-icon" id="undo-btn" title="Undo (Ctrl+Z)"><i class="ri-arrow-go-back-line"></i></button>
+                    <button class="btn-icon" id="redo-btn" title="Redo (Ctrl+Y)"><i class="ri-arrow-go-forward-line"></i></button>
+                </div>
+            </div>
+
+            <section class="canvas-container">
+                <div class="canvas-wrapper">
+                    <div class="placeholder">
+                        <i class="ri-image-add-line"></i>
+                        <p>Open an image to start editing</p>
+                    </div>
+                    <canvas id="image-canvas"></canvas>
+                </div>
+                
+                <button id="compare-btn" class="compare-btn" title="Hold to see original" disabled>
+                    <i class="ri-eye-line"></i>
+                </button>
+            </section>
+        </div>
+
+        <aside class="sidebar">
+            <div class="tabs">
+                <button class="tab-btn active" data-target="layers-panel">Layers</button>
+                <button class="tab-btn" data-target="adjust-panel">Adjust</button>
+                <button class="tab-btn" data-target="presets-panel">Presets</button>
+            </div>
+
+            <div class="panels">
+                <div id="layers-panel" class="panel active">
+                    <div class="panel-header">
+                        <h3>Layers</h3>
+                        <div class="layer-actions">
+                            <button id="add-layer-btn" class="btn-icon" title="New Layer"><i class="ri-add-line"></i></button>
+                            <button id="delete-layer-btn" class="btn-icon" title="Delete Layer"><i class="ri-delete-bin-line"></i></button>
+                        </div>
+                    </div>
+                    <div class="layers-list" id="layers-list">
+                        <!-- Layers will be added here dynamically -->
+                        <div class="layer-item active" data-layer-id="base">
+                            <div class="layer-visibility"><i class="ri-eye-line"></i></div>
+                            <div class="layer-thumb"></div>
+                            <div class="layer-name">Background</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="adjust-panel" class="panel">
+                    <div class="panel-header">
+                        <h3>Manual Adjustments</h3>
+                        <button id="reset-btn" class="btn-text">Reset</button>
+                    </div>
+                    <div class="filters-list">
+                        </div>
+                </div>
+
+                <div id="presets-panel" class="panel">
+                    <h3>Filters & Moods</h3>
+                    <div class="presets-grid">
+                        </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

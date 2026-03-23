@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+:root {
+    /* Background layers */
+    --bg-primary-color:    rgb(10, 10, 12);
+    --bg-secondary-color:  rgb(16, 16, 20);
+    --bg-tertiary-color:   rgb(22, 22, 28);
+    --bg-elevated-color:   rgb(28, 28, 36);
+    --bg-hover-color:      rgba(255, 255, 255, 0.04);
+    --bg-active-color:     rgba(255, 255, 255, 0.08);
+    --bg-danger-color:     rgb(220, 60, 60);
+    --bg-success-color:    rgb(34, 197, 94);
+
+    /* Text */
+    --text-primary-color:   rgb(240, 240, 248);
+    --text-secondary-color: rgb(160, 160, 175);
+    --text-tertiary-color:  rgb(90,  90, 108);
+    --text-active-color:    rgb(10,  10,  12);
+
+    /* Accent — electric indigo + neon mint highlight */
+    --accent-color:         #6366f1;
+    --accent-hover:         #818cf8;
+    --accent-glow:          rgba(99, 102, 241, 0.35);
+    --accent-subtle:        rgba(99, 102, 241, 0.12);
+    --accent-mint:          #34d399;
+    --accent-mint-glow:     rgba(52, 211, 153, 0.25);
+
+    /* Borders */
+    --border-color:         rgba(255, 255, 255, 0.07);
+    --border-hover:         rgba(255, 255, 255, 0.14);
+    --border-accent:        rgba(99, 102, 241, 0.4);
+
+    /* Typography */
+    --font-display: 'Syne', sans-serif;
+    --font-body:    'DM Sans', sans-serif;
+
+    /* Spacing */
+    --padding-sm:  0.5rem;
+    --padding-md:  1rem;
+    --padding-lg:  1.5rem;
+    --padding-xl:  2rem;
+    --padding-2xl: 3rem;
+
+    --margin-sm:  0.5rem;
+    --margin-md:  1rem;
+    --margin-lg:  1.5rem;
+    --margin-xl:  2rem;
+    --margin-xxl: 3rem;
+
+    --gutter-sm:  0.5rem;
+    --gutter-md:  1rem;
+    --gutter-lg:  1.5rem;
+    --gutter-xl:  2rem;
+    --gutter-xxl: 3rem;
+
+    /* Font sizes */
+    --font-size-xs:  0.70rem;
+    --font-size-sm:  0.8125rem;
+    --font-size-md:  0.9375rem;
+    --font-size-lg:  1.0625rem;
+    --font-size-xl:  1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+
+    /* Border radius */
+    --border-radius-sm:  4px;
+    --border-radius-md:  8px;
+    --border-radius-lg:  12px;
+    --border-radius-xl:  16px;
+    --border-radius-2xl: 24px;
+    --border-radius-pill: 9999px;
+
+    /* Shadows */
+    --shadow-sm:  0 1px 3px rgba(0,0,0,0.4);
+    --shadow-md:  0 4px 16px rgba(0,0,0,0.5);
+    --shadow-lg:  0 8px 32px rgba(0,0,0,0.6);
+    --shadow-accent: 0 0 24px var(--accent-glow);
+
+    /* Transitions */
+    --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.4s  cubic-bezier(0.4, 0, 0.2, 1);
+}
