@@ -6,10 +6,3 @@
     <priority>1.0</priority>
   </url>
 </urlset>
-```
-
-**Step 4: Add `robots.txt`** — create this in your project root:
-```
-User-agent: *
-Allow: /
-Sitemap: https://image-editor-lovat-eight.vercel.app/sitemap.xml
